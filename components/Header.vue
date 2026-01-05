@@ -88,7 +88,6 @@ const closeMenu = () => {
   cursor: pointer;
   padding: 0.5rem;
   color: #1a202c;
-  margin-left: auto;
 }
 
 .menu-icon {
