@@ -71,18 +71,13 @@ const closeMenu = () => {
 
 <style scoped>
 .header {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 50;
   width: 100%;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -93,11 +88,7 @@ const closeMenu = () => {
   cursor: pointer;
   padding: 0.5rem;
   color: #1a202c;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 60;
+  margin-left: auto;
 }
 
 .menu-icon {
