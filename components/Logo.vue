@@ -1,5 +1,5 @@
 <template>
-   <div class="bg-[#f0c36d] hover:bg-[#e0b35d]">
+   <div class="bg-[#f0c36d] ">
      <div class="flex w-[200px] lg:w-[488px] Border">
         <p class="text-[48px] lg:text-[96px] text-2xl">Logo</p>
     </div>

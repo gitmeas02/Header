@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center bg-transparent">
     <p>Xin chào, NguyenVanDen</p>
     <div
-      class="profile inline-flex items-center bg-[#1a1a1a] rounded-full p-2 pr-6 border-2 border-[#333] shadow-lg gap-4"
+      class="profile inline-flex items-center bg-[#1a1a1a] rounded-full border-2 border-[#333] shadow-lg gap-4"
     >
       <div
         class="flex items-center gap-3 bg-white rounded-full py-1 px-2 pr-1 shadow-inner h-12 min-w-[200px] relative"

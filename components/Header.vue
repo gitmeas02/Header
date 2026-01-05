@@ -1,8 +1,8 @@
 <template>
-  <header class="header">
+  <header class="sticky top-0 z-[1000] flex flex-col bg-yellow-400 w-full">
     <!-- TOP NAV -->
-    <nav class="top-nav bg-[#f0c36d] hover:bg-[#e0b35d]">
-      <ul class="top-nav-list hidden lg:flex">
+    <nav class="flex flex-1 w-full items-center gap-3 bg-[#f0c36d] ">
+      <ul class="flex items-center gap-1 list-none m-0 p-0 hidden lg:flex">
         <TopNavDropdown
           title="LỊCH TRỰC TIẾP"
           :items="liveItems"
@@ -128,32 +128,4 @@ const numberMessage = 5
 
 
 <style scoped>
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  background-color: yellow;
-  width: 100%;
-}
-
-.top-nav-list {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.top-nav {
-    display:flex ;
-    flex: 1;
-    width: 100%;
-    gap:12px;
-    align-items: center;
-}
-
-
 </style>

@@ -5,22 +5,44 @@
     @mouseleave="close"
   >
     <div
-      class="dropdown-container"
-      :class="{ 'container-active': isOpen }"
+      class="relative rounded-[20px] transition-colors duration-300 ease-in-out"
+    :class="{ 'bg-white/10': isOpen }"
     >
       <button class="live-schedule-btn">
         {{ title }}
       </button>
 
-      <div v-if="isOpen" class="dropdown-menu">
+      <div v-if="isOpen" class="absolute top-full left-0
+         min-w-[140px]
+         flex flex-col gap-1
+         p-[6px]
+         rounded-xl
+         shadow-md
+         z-[1001]
+         w-max
+         max-w-[200px]
+        bg-black/40 
+        backdrop-blur-md
+        border border-white/20
+        rounded-3xl
+        shadow-2xl
+">
         <a
           v-for="item in items"
           :key="item.label"
           href="#"
           class="dropdown-item"
         > 
-            <img :src="item.icon" alt="" class="dropdown-icon" />
-          <span>{{ item.label }}</span>
+            <img :src="item.icon" alt="" class="
+            w-[18px] 
+            h-[18px]
+            object-contain
+            flex-shrink-0
+
+            md:w-5 md:h-5
+            lg:w-6 lg:h-6
+            " />
+          <span class="truncate">{{ item.label }}</span>
         </a>
       </div>
     </div>
@@ -33,7 +55,7 @@ import { ref } from 'vue'
 defineProps({
   title: String,
   items: Array,
-  
+
 })
 
 const isOpen = ref(false)
@@ -48,17 +70,6 @@ function close() {
 </script>
 
 <style scoped>
-/* Container that wraps button and dropdown */
-.dropdown-container {
-  position: relative;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-/* When hovering over container (button or dropdown) */
-.dropdown-container.container-active {
-  background-color: rgba(241, 237, 237, 0.8);
-}
 
 .live-schedule-btn {
   padding: 6px 10px;
@@ -96,11 +107,6 @@ function close() {
   }
 }
 
-.live-schedule-btn:hover {
-  background-color: black;
-  color: rgba(235, 218, 68, 0.712);
-}
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -110,7 +116,6 @@ function close() {
   flex-direction: column;
   gap: 4px;
   padding: 6px;
-  background-color: rgba(214, 203, 203, 0.952);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1001;
@@ -192,33 +197,5 @@ function close() {
   }
 }
 
-.dropdown-icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
 
-/* Tablet */
-@media (min-width: 768px) {
-  .dropdown-icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .dropdown-icon {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-/* Text overflow handling */
-.dropdown-item span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 </style>
